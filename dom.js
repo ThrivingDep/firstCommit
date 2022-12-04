@@ -27,8 +27,20 @@
 //headerTitle.style.borderBottom = 'solid 3px #000';
 //header.style.borderBottom = 'solid 3px #000';
 
-var titles = document.querySelector('.title');
+//var titles = document.querySelector('.title');
 
-console.log(titles);
-titles.textContent = 'ADD ITEM';
-titles.style.color = 'green';
+//console.log(titles);
+//titles.textContent = 'ADD ITEM';
+//titles.style.color = 'green';
+
+var items = document.getElementsByClassName('list-group-item');
+console.log('items');
+console.log(items[1]);
+items[1].textContent = 'Hello 2';
+//items[1].style.fontWeight = 'bold';
+items[1].style.backgroundColor = 'yellow';
+items[3].style.backgroundColor = 'green';
+
+for(var i =0; i<items.length; i++){
+    items[i].style.fontWeight = 'bold';
+}
