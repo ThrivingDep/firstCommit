@@ -50,13 +50,15 @@
            
             localStorage.setItem("email", email.value);
             localStorage.setItem("name", nam.value);
+            const myObj = {
+               nam:nam.value,
+               email:email.value,
+            }
+            localStorage.setItem('userDetails',JSON.stringify(myObj));
         });
 
-        // localStorage.setItem('ls_name',name);
-        // localStorage.setItem('ls_email', email);
-
-        console.log(localStorage.getItem('name'));
-        console.log(localStorage.getItem('email'));
+        //console.log(localStorage.getItem('name'));
+        //console.log(localStorage.getItem('email'));
       
     </script>
   </body>
