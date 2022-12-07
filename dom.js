@@ -88,9 +88,101 @@
 
 
  //QUERYSELECTORALL//
-var odd = document.querySelectorAll('li:nth-child(odd)');
+//var odd = document.querySelectorAll('li:nth-child(odd)');
 
-for(var i =0; i<odd.length;i++){
-   odd[i].style.backgroundColor = 'green';
-}
+ //for(var i =0; i<odd.length;i++){
+ // odd[i].style.backgroundColor = 'green';
+//}
+
+// TRAVERSING THE DOM//
+//var itemList = document.querySelector('#items');
+//ParentNode 
+//console.log(itemList.parentNode);
+//itemList.parentNode.style.backgroundColor = '#f4f4f4';
+//console.log(itemList.parentNode.parentNode.parentNode);
+
+//parentElement//
+
+//console.log(itemList.parentElement);
+//itemList.parentElement.style.backgroundColor = '#f4f4f4';
+//console.log(itemList.parentElement.parentElement.parentElement);
+
+//CHILDNODES//
+
+//console.log(itemList.childNodes);
+
+//console.log(itemList.children);
+//console.log(itemList.children[1]);
+//itemList.children[1].style.backgroundColor = 'yellow';
+
+//firstchild//
+//console.log(itemList.firstChild);
+
+//firstElementChild 
+
+//console.log(itemList.firstElementChild);
+//itemList.firstElementChild.textContent = 'Hello 1';
+
+//lastchild//
+//console.log(itemList.lastChild);
+//lastElementChild 
+
+//console.log(itemList.lastElementChild);
+//itemList.lastElementChild.textContent = 'Hello 1';
+
+//nextSibling
+//console.log(itemList.nextSibling);
+
+//nextElementSbiling
+//console.log(itemList.nextElementSibling);
+
+//previousSibling
+//console.log(itemList.previousSibling);
+
+// previousElementSibling
+//console.log(itemList.previousElementSibling);
+//itemList.previousElementSibling.style.color = 'green';
+
+// createElement
+
+// create a div
+var newDiv = document.createElement('div');
+//Add class
+newDiv.className= 'hello';
+
+// Add id 
+newDiv.id = 'hello1';
+
+// Add attribute
+newDiv.setAttribute('title','Hello Div');
+
+// create text node
+var newDivText = document.createTextNode('Hello world');
+
+//Add text to div 
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+container.insertBefore(newDiv , h1);
+
+ var parentNode = document.getElementById('items');
+ //var newli = document.createElement('li');
+  parentNode.className = 'list-group1';
+  parentNode.id = 'items1';
+ //var newliText = document.createTextNode('Hello World');
+ //newli.appendChild(newliText);
+ //parentNode.innerHTML = '<li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li>'
+ //parentNode.innerHTML = newliText + parentNode.innerHTML
+ const temp = '<li>Hello World</li>'
+  // parentnode = parentNode.appendChild(newli);
+  parentNode.innerHTML = temp + parentNode.innerHTML;
+
+
+
+
+
 
